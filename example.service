@@ -1,0 +1,11 @@
+[Unit]
+Description=Simple pywatchdog daemon
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/absolute/path/to/script.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
