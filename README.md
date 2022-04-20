@@ -203,8 +203,8 @@ In this example we are in the home directory of user `ben` and the watchdog modu
 Download the two files:
 
 ```
-wget https://github.com/AT0myks/pywatchdog/blob/main/example.py
-wget https://github.com/AT0myks/pywatchdog/blob/main/example.service
+wget https://raw.githubusercontent.com/AT0myks/pywatchdog/main/example.py
+wget https://raw.githubusercontent.com/AT0myks/pywatchdog/main/example.service
 ```
 
 Let's rename them to something more meaningful:
