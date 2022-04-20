@@ -210,14 +210,14 @@ wget https://raw.githubusercontent.com/AT0myks/pywatchdog/main/example.service
 Let's rename them to something more meaningful:
 
 ```
-mv example.py pywatchdog.py
+mv example.py pywatchdog_daemon.py
 mv example.service pywatchdog.service
 ```
 
 Make the script executable:
 
 ```
-chmod +x pywatchdog.py
+chmod +x pywatchdog_daemon.py
 ```
 
 Move the service file to `/etc/systemd/system/`:
@@ -235,7 +235,7 @@ sudo systemctl edit --full pywatchdog
 and specify the correct path to the script:
 
 ```
-ExecStart=/home/ben/pywatchdog.py
+ExecStart=/home/ben/pywatchdog_daemon.py
 ```
 
 If the watchdog module is not loaded at boot (should not be the case for a Raspberry Pi),
