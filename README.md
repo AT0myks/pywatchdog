@@ -27,6 +27,9 @@ if it is not notified regularly from the user space, usually by a daemon.
 If user space fails for any reason, the watchdog will stop being notified and when the timeout occurs,
 it will reboot the system.
 
+On the software side, once the kernel driver is loaded,
+communication with the hardware is done via the special device file `/dev/watchdog`.
+
 It is useful when you have for example a remote system that you don't have physical access to,
 and you want to ensure that it will not freeze and become unavailable indefinitely until you get physical access again.
 
@@ -69,7 +72,8 @@ with Watchdog() as wdt:
     ...
 ```
 
-`Watchdog` takes a single argument defaulting to `/dev/watchdog`, which should work in most cases.
+`Watchdog` takes as an argument the device file.
+It defaults to `/dev/watchdog`, which should work in most cases.
 
 You can also manually `open` and `close` the file:
 
@@ -181,6 +185,7 @@ which means that when the timeout occurs, the computer should reboot.
 
 A countdown before reboot will be shown.
 Make sure to save your work before using this command.
+Use Ctrl-C to abort.
 
 ## Example
 
